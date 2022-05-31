@@ -1,0 +1,57 @@
+header, .container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #1aff00;
+  color: green;
+}
+
+header button, .container button {
+  background-color: green;
+  border-style: none;
+  background-color: primaryBtn;
+}
+
+header button::before, .container button::before {
+  content: "Mother";
+  background-color: primaryBtn;
+  color: textColor;
+}
+
+.contact {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: blue;
+}
+
+.container {
+  background-color: coral;
+  color: black;
+  font-weight: 12px bold;
+  border: 5px solid black;
+  width: 80%;
+}
+/*# sourceMappingURL=style.css.map */

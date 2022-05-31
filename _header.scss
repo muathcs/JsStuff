@@ -1,0 +1,26 @@
+@mixin flexCenter($direction, $color){
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+    background-color: $color;
+}
+
+
+
+header{
+
+    @include flexCenter(column, rgb(26, 255, 0));
+    color: $textColor;
+    button{
+        background-color: $textColor;
+        border-style: none;
+        background-color: primaryBtn;
+        &::before{
+            content: "Mother";
+            background-color: primaryBtn;
+            color: textColor;
+        }
+    }
+}

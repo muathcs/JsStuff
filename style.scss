@@ -1,0 +1,19 @@
+// variables
+// define elements in the same bracket
+// importing stuff.
+@import "variable";
+@import "header";
+
+
+.contact{
+    @include flexCenter(row, blue);
+}
+
+.container{
+    @extend header;
+    background-color: coral;
+    color: black;
+    font-weight: 12px bold;
+    border: 5px solid black;
+    width: 100% - 20%;
+}
