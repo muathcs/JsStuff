@@ -8,6 +8,13 @@ fill.addEventListener("dragend", dragEnd);
 
 //loop through empty
 
+empties.forEach(empty=>{
+    empty.addEventListener("dragover", dragOver)
+    empty.addEventListener("dragenter", dragEnter)
+    empty.addEventListener("dragleave", dragLeave)
+    empty.addEventListener("drop", dragDrop)
+})
+
 // Drag functions
 function dragStart(){
     this.className += " hold";
@@ -19,4 +26,21 @@ function dragStart(){
 
 function dragEnd(){
     this.className = "fill"
+}
+
+function dragOver(e){
+    e.preventDefault();
+    console.log(this)
+}
+
+function dragEnter(e){
+    e.preventDefault();
+    this.classList.add("hovered")
+}
+function dragLeave(){
+    this.classList.remove("hovered")
+}
+function dragDrop(){
+    this.classList.remove("hovered")
+    this.append(fill)
 }
