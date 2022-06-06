@@ -44,5 +44,4 @@ function vidoes(email){
     });
 }
 
-login("devedF@gmail.com", 12345)
-.then(user => console.log(user))
+login("devedF@gmail.com", 12345).then(user => console.log(user)).then(vidoe => vidoes("muath")).then(video => console.log(video[0]));
