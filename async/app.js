@@ -27,21 +27,22 @@ console.log("hi")
 
 const items = [1,2,3,4,5,6,7,8,9,10]
 
-function login(email, password, callback){
-    setTimeout(() => {
-        console.log("NOW WE HAVE THE DATA");
-        callback({userEmail: email});
-    }, 5000);
+function login(email, password){
+    return new Promise((resolve, reject) => {;
+        setTimeout(() => {
+            console.log("NOW WE HAVE THE DATA");
+            resolve({userEmail: email});
+        }, 5000);
+})
 }
 
-function vidoes(email, callback){
+function vidoes(email){
+    return new Promise((resolve, reject) =>{
     setTimeout(() => {
-        callback(['vidoe1', 'video2', 'video3'])
+        resolve(['vidoe1', 'video2', 'video3'])
     }, 1000);
+    });
 }
 
-const user = login("devedF@gmail.com", 12345, user =>{
-    vidoes(user.userEmail, videos=>{
-        console.log(videos[0])
-    });
-});
+login("devedF@gmail.com", 12345)
+.then(user => console.log(user))
