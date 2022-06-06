@@ -41,5 +41,7 @@ function vidoes(email, callback){
 }
 
 const user = login("devedF@gmail.com", 12345, user =>{
-    console.log(user.userEmail);
-})
+    vidoes(user.userEmail, videos=>{
+        console.log(videos[0])
+    });
+});
