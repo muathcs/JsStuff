@@ -36,7 +36,7 @@ function login(email, password){
 })
 }
 
-function vidoes(email){
+function videos(email){
     return new Promise((resolve, reject) =>{
     setTimeout(() => {
         resolve(['vidoe1', 'video2', 'video3'])
@@ -44,4 +44,11 @@ function vidoes(email){
     });
 }
 
-login("devedF@gmail.com", 12345).then(user => console.log(user)).then(vidoe => vidoes("muath")).then(video => console.log(video[0]));
+login("devedF@gmail.com", 12345).then(user => console.log(user)).then(vidoe => videos("muath")).then(video => console.log(video[0]));
+
+async function displayUser(){
+    const loginUser = await login("muath", 2323);
+    const UserVideo = await videos(loginUser.userEmail);
+    console.log(UserVideo)
+}
+displayUser()
