@@ -47,8 +47,12 @@ function videos(email){
 // login("devedF@gmail.com", 12345).then(user => console.log(user)).then(vidoe => videos("muath")).then(video => console.log(video[0]));
 
 async function displayUser(){
-    const loginUser = await login("muath", 2323);
-    const UserVideo = await videos(loginUser.userEmail);
-    console.log(UserVideo[1])
+    try{
+        const loginUser = await login("muath", 2323);
+        const UserVideo = await videos(loginUser.userEmail);
+        console.log(UserVideo[1])
+    }catch(err){
+        console.log(err)
+    }
 }
 displayUser()
