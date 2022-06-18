@@ -10,4 +10,4 @@ function whenToSleep(tw){//tw = time woken
     }
 }
 
-whenToSleep(16)
+whenToSleep(12)
