@@ -1,7 +1,19 @@
 const fill = document.querySelector(".fill");
 const empties = document.querySelectorAll(".empty")
+const clicked = document.querySelectorAll(".clicked")
 
-// Event listeners
+
+function onClick(div){
+    document.querySelectorAll(".clicked").forEach(clicked =>{
+        clicked.classList.remove("clicked");
+    })
+    this.classList.add("clicked")
+    console.log("this", this)
+}
+
+document.querySelectorAll(".empty").forEach(div=>{
+    div.addEventListener("click", onClick)
+})
 
 fill.addEventListener("dragstart", dragStart);
 fill.addEventListener("dragend", dragEnd);
@@ -21,7 +33,6 @@ function dragStart(){
     setTimeout(()=>{
         this.className= "invisible"
     },0)
-    console.log("start")
 }
 
 function dragEnd(){
@@ -30,7 +41,6 @@ function dragEnd(){
 
 function dragOver(e){
     e.preventDefault();
-    console.log(this)
 }
 
 function dragEnter(e){

@@ -12,6 +12,8 @@ body{
     cursor: pointer;
 }
 
+
+
 .empty{
     display: inline-block;
     height: 160px;
@@ -19,6 +21,15 @@ body{
     margin: 10px;
     border: solid 3px salmon ;
     background-color: white;
+}
+
+.clicked{
+    background-color: red;
+}
+
+
+.empty:focus-within{
+    background-color: purple;
 }
 
 .hold{
