@@ -8,5 +8,4 @@ const hello = () => {
 }
 
 
-console.log(print());
-console.log(hello());
+console.log("hi")
